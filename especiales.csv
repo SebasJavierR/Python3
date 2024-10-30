@@ -1,0 +1,6 @@
+simbolo,aspecto,alteracion,tecla,descripcion
+!,VELOCIDAD,-0.3,v,aumenta la velocidad
+&,VELOCIDAD,0.3,b,disminuye la velocidad
++,LARGO,1,n,aumenta el largo
+%,LARGO,-1,m,disminuye el largo
+

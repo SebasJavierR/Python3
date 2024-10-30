@@ -1,0 +1,26 @@
+algoritmo resolver_laberinto():
+    Sea camino := una pila vacía de celdas
+    Sea visitadas := un conjunto vacío
+    apilar(camino, celda_origen)
+
+    mientras no es_vacia(camino):
+        backtrack(camino, visitadas)
+
+algoritmo backtrack(camino, visitadas)
+    Sea celda := ver_tope(camino)
+    agregar(visitadas, celda)
+
+    si es_salida(celda):
+        # llegamos!
+        retornar
+
+    Para toda celda v vecina no visitada:
+        si pertenece(visitadas, v):
+            continuar
+        si es_pared(v):
+            continuar
+        apilar(camino, v)
+        retornar
+
+    # no hay mas posibles caminos a partir de esta celda
+    desapilar(camino)
